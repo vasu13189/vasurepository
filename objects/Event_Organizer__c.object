@@ -162,4 +162,50 @@
     <searchLayouts/>
     <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <referenceTo>Location__c</referenceTo>
+        <relationshipLabel>Event Organizers</relationshipLabel>
+        <relationshipName>Event_Organizers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Alternative_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Alternative Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alternative_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Alternative Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
 </CustomObject>

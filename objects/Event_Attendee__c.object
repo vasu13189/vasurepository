@@ -163,4 +163,40 @@
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
+    <fields>
+        <fullName>Event__c</fullName>
+        <externalId>false</externalId>
+        <label>Event</label>
+        <referenceTo>Event__c</referenceTo>
+        <relationshipLabel>Event Attendees</relationshipLabel>
+        <relationshipName>Event_Attendees</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Attendee__c</fullName>
+        <externalId>false</externalId>
+        <label>Attendee</label>
+        <referenceTo>Attendee__c</referenceTo>
+        <relationshipLabel>Event Attendees</relationshipLabel>
+        <relationshipName>Event_Attendees</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <validationRules>
+        <fullName>Event_is_Not_Accepting_Registrations</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR (
+    NOT Event__r.Live__c ,
+    Event__r.Remaining_Seats__c &lt;=0
+)</errorConditionFormula>
+        <errorDisplayField>Event__c</errorDisplayField>
+        <errorMessage>Event is Not Accepting Registrations</errorMessage>
+    </validationRules>
 </CustomObject>
