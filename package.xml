@@ -36,6 +36,7 @@
     <members>*</members>
     <name>CustomPermission</name>
   </types>
+  
   <types>
     <members>*</members>
     <name>CustomTab</name>
