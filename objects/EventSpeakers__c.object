@@ -164,4 +164,37 @@
     <sharingModel>ControlledByParent</sharingModel>
     <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>
+    <fields>
+        <fullName>Event__c</fullName>
+        <externalId>false</externalId>
+        <label>Event</label>
+        <referenceTo>Event__c</referenceTo>
+        <relationshipLabel>Event &amp; Speakers</relationshipLabel>
+        <relationshipName>Event_Speakers</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Speaker__c</fullName>
+        <externalId>false</externalId>
+        <label>Speaker</label>
+        <referenceTo>Speaker__c</referenceTo>
+        <relationshipLabel>Event &amp; Speakers</relationshipLabel>
+        <relationshipName>Event_Speakers</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <validationRules>
+        <fullName>Event_is_Not_Live_or_Has_been_Organized</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT Event__r.Live__c</errorConditionFormula>
+        <errorDisplayField>Event__c</errorDisplayField>
+        <errorMessage>Event_is_Not_Live_or_Has_been_Organized</errorMessage>
+    </validationRules>
 </CustomObject>
